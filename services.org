@@ -1,0 +1,137 @@
+** Compute
+   1. EC2
+      It's basically is virtual machines on the cloud.
+   2. EC2 Container Service
+      It's a highly scalable, high performance Container Management Service that supports docker containers.
+   3. Elastic Beanstalk
+      It's a service for deploying and scaling web applications and services developed with Java,
+      .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.
+   4. Lambda
+      Is a compute service that lets you run code without provisioning or managing servers.
+
+
+** Developer Tools
+    1. CodeCommit
+       Like a github but in aws.
+    2. CodeBuild
+       It's a fully managed build service that compiles source code, runs tests, and produces software packages
+       that are ready to deploy. With CodeBuild, you don’t need to provision, manage, and scale your own build servers.
+       CodeBuild scales continuously and processes multiple builds concurrently, so your builds are not left waiting
+       in a queue.
+    3. CodeDeploy
+
+
+** Internet of Things
+** Storage
+** Management Tools
+    1. Cloud Watch
+       It's a monitoring service for AWS cloud resources and the applications you run on AWS.
+    2. CloudFormation
+       Gives developers and systems administrators an easy way to create and manage a collection of related
+       AWS resources, provisioning and updating them in an orderly and predictable fashion.
+    3. Cloud Trail
+       It's a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account.
+       It's used to auditing changes to your aws environment.
+    4. Opsworks
+       It's a configuration management service that uses Chef, an automation platform that treats server configurations
+       as code. OpsWorks uses Chef to automate how servers are configured, deployed, and managed across your
+       Amazon Elastic Compute Cloud (Amazon EC2) instances or on-premises compute environments. OpsWorks has two offerings,
+       AWS Opsworks for Chef Automate, and AWS OpsWorks Stacks.
+    5. Config
+       It's a service that enables you to assess, audit, and evaluate the configurations of your AWS resources.
+       Config continuously monitors and records your AWS resource configurations and allows you to automate the
+       evaluation of recorded configurations against desired configurations. With Config, you can review changes
+       in configurations and relationships between AWS resources, dive into detailed resource configuration histories,
+       and determine your overall compliance against the configurations specified in your internal guidelines.
+       This enables you to simplify compliance auditing, security analysis, change management, and operational
+       troubleshooting.
+    6. Service Catalog
+       It's a service designed for larger enterprises, basically allows to build out what it is that you authorize
+       within your organization and what services are not authorized.
+    7. Trusted Advisor
+       Give you tips on how to do cost optimization, how to do performance optimization, any security fixes you should
+       make in how to build mor fault tolerant environment. It's basically an audit where automated way of scanning your
+       environment giving you different tips.
+
+
+** Game Development
+** Database
+** Mobile Services
+
+** Networking & Content Delivery
+    1. VPC(Virtual Private Cloud)
+       It's a virtual Data Center.
+       You can easily customize the network configuration for your Amazon Virtual Private Cloud.
+       For example, you can create a public-facing subnet for your webservers that has access to the Internet,
+       and place your backend systems such as databases or application servers in a private-facing subnet
+       with no Internet access.
+       You can leverage multiple layers of security, including security groups and network access control lists,
+       to help control access to Amazon EC2 instances in each subnet.
+       Additionally, you can create a Hardware Virtual Private Network (VPN) connection
+       between your corporate datacenter and your VPC and leverage the AWS cloud as an extension of your corporate
+       datacenter.
+    2. Route53
+       Its an Amazon's DNS service.
+    3. Cloud Front
+       It's a Content Delivery Network(CDN) service that securesly delivers data, video, applications and APIs to clients.
+    4. Direct Connect
+       Allows to connect office or physical data centers through aws using dedicated telephone line instead over the
+       internet.
+
+
+** Security, Identity & Compliance
+    1. Identity and Access Management(IAM)
+       Using IAM, you can create and manage AWS users and groups, and use permissions to allow
+       and deny their access to AWS resources.
+    2. Inspector
+       It's an automated security assessment service that helps improve the security and
+       compliance of applications deployed on AWS. Amazon Inspector automatically assesses applications
+       for vulnerabilities or deviations from best practices. After performing an assessment, Amazon Inspector produces
+       a detailed list of security findings prioritized by level of severity. These findings can be reviewed directly
+       or as part of detailed assessment reports which are available via the Amazon Inspector console or API.
+    3. Certificate Manager
+       It's a service that lets you easily provision, manage, and deploy Secure Sockets
+       Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services.
+       This services provides free SSL certificates.
+    4. Directory Service
+       It's active directory(microsoft) used through aws.
+    5. Web Application Firewall(WAF)
+       Its a service that helps to protect the application from common web exploits.
+    6. Artifacts
+       It's were you get your documentatio in the aws console
+
+
+** Application Services
+    1. Step Functions
+       makes it easy to coordinate the components of distributed applications and microservices using visual workflows.
+       Building applications from individual components that each perform a discrete function lets you scale and change
+       applications quickly. Step Functions is a reliable way to coordinate components and step through the functions
+       of your application. Step Functions provides a graphical console to arrange and visualize the components
+       of your application as a series of steps. This makes it simple to build and run multistep applications.
+       Step Functions automatically triggers and tracks each step, and retries when there are errors, so your
+       application executes in order and as expected. Step Functions logs the state of each step, so when things do go
+       wrong, you can diagnose and debug problems quickly. You can change and add steps without even writing code, so
+       you can easily evolve your application and innovate faster.
+    2. Simple Workflow Service(SWF)
+       helps developers build, run, and scale background jobs that have parallel or sequential steps. You can think
+       of Amazon SWF as a fully-managed state tracker and task coordinator in the Cloud.
+       If your app's steps take more than 500 milliseconds to complete, you need to track the state of processing,
+       and you need to recover or retry if a task fails, Amazon SWF can help you.
+    3. API Gateway
+       It allows you to create publish, mantain and monitor and also securie API. Basically it's a door for your app
+       access backend data.
+    4. AppStream
+       Run Windows applications in the cloud and stream it to any devices.
+    5. Elastic Transcoder
+       is media transcoding in the cloud. It is designed to be a highly scalable, easy to use and a cost effective way
+       for developers and businesses to convert (or “transcode”) media files from their source format into versions
+       that will playback on devices like smartphones, tablets and PCs.
+
+
+** Networking & Content Delivery
+** ApplicationServices
+** Migration
+** Analytics
+** Business Productivity
+** Artificial Intelligence
+** Desktp & App Streaming
