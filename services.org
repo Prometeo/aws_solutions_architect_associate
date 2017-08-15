@@ -173,3 +173,12 @@
 
 ** Artificial Intelligence
 ** Desktp & App Streaming
+   1. WorkSpaces
+      It's a fully managed, secure Desktop-as-a-Service (DaaS) solution which runs on AWS.
+      With Amazon WorkSpaces, you can easily provision virtual, cloud-based Microsoft Windows desktops
+      for your users, providing them access to the documents, applications, and resources they need,
+      anywhere, anytime, from any supported device.
+   2. AppStream
+      It's a fully managed, secure application streaming service that allows you to stream desktop applications
+      from AWS to any device running a web browser, without rewriting them. Amazon AppStream 2.0 provides users
+      instant-on access to the applications they need, and a responsive, fluid user experience on the device of their choice.
