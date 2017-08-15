@@ -63,6 +63,25 @@
 ** Game Development
 ** Database
 ** Mobile Services
+    1. Mobile Hub
+       Lets you configure and design features for your mobile apps; like user authentication,
+       data storage, backend logic, push notifications content, delivery and analytics.
+    2. Cognito
+       Makes easy to have user sign up and sign intp your apps using things like social identity providers.
+    3. Device Farm
+       AWS Device Farm is an app testing service that lets you test and interact with your Android, iOS,
+       and web apps on many devices at once, or reproduce issues on a device in real time. View video,
+       screenshots, logs, and performance data to pinpoint and fix issues before shipping your app.
+    4. Mobile Analytics
+       You can measure app usage and app revenue. By tracking key trends such as new vs. returning users,
+       app revenue, user retention, and custom in-app behavior events, you can make data-driven
+       decisions to increase engagement and monetization for your app. You can view key charts in the
+       Mobile Analytics console and automatically export your app event data to Amazon S3 and Amazon Redshift
+       to run custom analysis.
+    5. Pinpoint
+       Lets you send messages using a variety of channels, including Email, Text Messages (SMS),
+       and Mobile Push Notifications so you can send the appropriate message using the best channel for
+       a particular campaign or interaction. Its like google analytics for your mobile apps.
 
 ** Networking & Content Delivery
     1. VPC(Virtual Private Cloud)
