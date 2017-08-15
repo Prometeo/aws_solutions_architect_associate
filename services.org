@@ -4,6 +4,8 @@
    2. Availability Zone(AZ):
       Its simply a data center, and Availability Zone could be technically be a collection of data centers,
       but basically they are facilities that are very close to each other.
+   3. Edge Locations
+      Are CDN End Points for CloudFront
 
 ** Compute
    1. EC2
