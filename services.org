@@ -19,6 +19,12 @@
        CodeBuild scales continuously and processes multiple builds concurrently, so your builds are not left waiting
        in a queue.
     3. CodeDeploy
+       It's a service that automates code deployments to any instance, including Amazon EC2 instances and instances
+       running on-premises.
+    4. CodePipeline
+       It's a continuous integration and continuous delivery service for fast and reliable application and
+       infrastructure updates. CodePipeline builds, tests, and deploys your code every time there is a code change,
+       based on the release process models you define.
 
 
 ** Internet of Things
