@@ -83,6 +83,7 @@
        and Mobile Push Notifications so you can send the appropriate message using the best channel for
        a particular campaign or interaction. Its like google analytics for your mobile apps.
 
+
 ** Networking & Content Delivery
     1. VPC(Virtual Private Cloud)
        It's a virtual Data Center.
@@ -158,5 +159,12 @@
 ** Migration
 ** Analytics
 ** Business Productivity
+   1. WorkDocs
+      It's a fully managed, secure enterprise storage and sharing service with strong administrative
+      controls and feedback capabilities that improve user productivity.
+   2. WorkMail
+      Amazon WorkMail is a secure, managed business email and calendar service with support for existing
+      desktop and mobile email client applications.
+
 ** Artificial Intelligence
 ** Desktp & App Streaming
