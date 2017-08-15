@@ -28,6 +28,10 @@
 
 
 ** Internet of Things
+   1. IOT
+      Internet of Things through aws.
+
+
 ** Storage
 ** Management Tools
     1. Cloud Watch
@@ -165,6 +169,7 @@
    2. WorkMail
       Amazon WorkMail is a secure, managed business email and calendar service with support for existing
       desktop and mobile email client applications.
+
 
 ** Artificial Intelligence
 ** Desktp & App Streaming
