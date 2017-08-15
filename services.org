@@ -1,3 +1,10 @@
+** AWS Global Infrastructure
+   1. Regions:
+      It's a geographical area, each Region consits of 2(or more) Availability Zones.
+   2. Availability Zone(AZ):
+      Its simply a data center, and Availability Zone could be technically be a collection of data centers,
+      but basically they are facilities that are very close to each other.
+
 ** Compute
    1. EC2
       It's basically is virtual machines on the cloud.
