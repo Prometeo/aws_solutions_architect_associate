@@ -1,0 +1,102 @@
+* S3
+S3 provides developers and IT teams with secure, durable, highly-scalable object storage.
+Amazon S3 is easyto use, with a simple web services interfaces to store and retrieve any amount
+of data from anywhere on the web.
+
+** S3 - The Basics
+   - S3 is Object based i.e. allows you to upload files.
+   - Files can be from 0 Bytes to 5TB.
+   - There is unlimited storage.
+   - Files are stored in buckets(bucket is just a folder).
+   - S3 is universal namespace, that is, name must be unique globally.
+   - When you create a bucket it creates DNS address. Format: "https://s3-eu-west-1.amazonaws.com/acloudguru".
+   - When you upload a file to S3 yo will recieve a HTTP 200 code if the upload was succesful.
+   - Built for 99.99% availability for the S3 platform.
+   - Amazon guarantee 99.9% availability.
+   - Amazon guarantees 99.999999999% durability for S3 information(11 x 9's).
+   - Tiered Storage available -> [[S3:Tier/Classes]].
+   - Life Cicle management.
+   - Versioning.
+   - Encryption.
+   - Secure your data using Access Control Lists and Bucket Policies.
+
+** Storage Tier/Classes
+   <<S3:Tier/classes>>
+   - S3 - 99.99% availability, 99.999999999% durability, stored redundantly across multiple
+     devices in multiple facilities and is designed to sustain the loss of 2 facilities concurrently.
+   - S3 - IA(Infrequently Accessed) For data that is accessed less frequently, but requires rapid access
+     when needed. Lower fee than S3, but you are charged a retrieval fee.
+   - Reduced Redundancy Storage(RRS) - Designed to provide 99.99% durability and 99.99% availability
+     of objects over a given year.
+   - Glacier - Very cheap, but used for archival only. It takes 3-5 to restore from Glacier. -> [[s3:Glacier]]
+   - Table:
+
+     |                                     | Standard      | Standard-IA   | Reduced Redundancy Storage |
+     | Durability                          | 99.999999999% | 99.999999999% | 99.99%                     |
+     | Availability                        | 99.99%        | 99.9%         | 99.99%                     |
+     | Concurrent facility fault tolerance | 2             | 2             | 1                          |
+     | SSL support                         | Yes           | Yes           | Yes                        |
+     | First byte latency                  | Miliseconds   | Miliseconds   | Miliseconds                |
+     | Lifecycle Management Policies       | Yes           | Yes           | Yes                        |
+
+
+** Glacier
+   <<S3:Glacier>>
+Its and extremely low-cost storage service for data archival. Amazon Glacier stores data for as little
+as $0.01 per gigabyte per month, and is optimized for data that is infrequently accessed and for which
+retrieval times of 3 to 5 hours are suitable.
+
+** S3 vs Glacier
+
+|                           | Standard      | Standard-IA      | Amazon Glacier            |
+| Designed for Durability   | 99.999999999% | 99.999999999%    | 99.999999999%             |
+| Designed for Availability | 99.99%        | 99.9%            | N/A                       |
+| Availability SLA          | 99.9%         | 99%              | N/A                       |
+| Minimum Object Size       | N/A           | 128KB*           | N/A                       |
+| Minimum Storage Duration  | N/A           | 30 Days          | 90 days                   |
+| Retrieval Fee             | N/A           | per GB retrieved | per GB retrieved**        |
+| First Byte Latency        | Milliseconds  | Milliseconds     | Select minutes or hours** |
+| Storage Class             | Object level  | Object level     | Object level              |
+| Lifecycle Transitions     | Yes           | Yes              | Yes                       |
+
+
+** S3-Charges
+   - Charged for:
+     * Storage -> How much data are you storing.
+     * Requests -> For the number of requests.
+     * Storage management Pricing -> You can a whole bunch of tags to it, and this allows
+       you to control costs so you can know to whom the data is asociated, and so they do charge
+       on a per tag basis.
+     * Data Transfer Pricing -> Data comming into S3 is free but moving data around S3, maybe doing
+       replication from one region to another you will be charged for that.
+     * Transfer Acceleration -> [[S3:Transfer-Acceleration]]
+
+
+** Transfer Acceleration
+<<S3:Transfer-Acceleration>>
+
+Amazon S3 Transfer Accelration enables fast, easy, and secure transfers of files over long distances between
+your end users and S3 bucket.
+
+Transfer Acceleration tkes adventage of Amazon CloudFront's globally distributed edge locaions. As the data
+arrives at an edge location, data is routed to Amazon S3 over an optimized network path.
+
+
+** Data Consistency Model For S3
+   - Read after Write consitency for PUTS of new objects.
+   - When you PUT a new object you get inmediately consistency- so you going to be able
+     to read that object.
+   - Eventual Consistency for overwrite PUTS and DELETES(can take some time to propagate).
+   - Updates to S3 are atomic(you're either going to get the new data or you're going to
+     get the old data, you wont get partial or corrupted data).
+
+** S3 is a simple key, value store
+   - S3 is Object based. Objects consist of the following:
+     1. Key -> The name of the object.
+     2. Value -> The data and is made up of sequence of bytes.
+     3. Version ID -> Important for versioning.
+     4. Metadata -> Data about the data you are storing.
+     5. Subresources ->
+        * Access Control Lists -> This allows you do fine grained permissions so you can
+          do an access control it's on individual objects.
+        * Torrent -> S3 does support bit torrent protocol.
