@@ -100,3 +100,15 @@ arrives at an edge location, data is routed to Amazon S3 over an optimized netwo
         * Access Control Lists -> This allows you do fine grained permissions so you can
           do an access control it's on individual objects.
         * Torrent -> S3 does support bit torrent protocol.
+
+** Versioning
+   - Once turned on it can't be removed, only disabled.
+   - In reality is saving the same amount of files than versions, so the size
+     of the bucket will be the sum of the verions of all files.
+   - You can delete versions.
+   - Deleted versions can't be restored.
+   - You can restore a deleted object
+     -> Select Deleted objects
+     -> Select the object
+     -> In the more select object, select the unde delete option.
+   - Versioning's can add Multifactor Authentication(MFA) to allow delete an object.
