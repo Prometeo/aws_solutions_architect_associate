@@ -112,3 +112,14 @@ arrives at an edge location, data is routed to Amazon S3 over an optimized netwo
      -> Select the object
      -> In the more select object, select the unde delete option.
    - Versioning's can add Multifactor Authentication(MFA) to allow delete an object.
+
+** Cross Region Replication
+   - In the properties bucket select Cross-region replication.
+   - To use a Cross-region replication versioning must be enabled on the souce and target bucket
+   - Objects that are already stored on the bucket before the Cross-region replication
+     has done are not going to be replicated, will be replicated only new objects and updates.
+   - When replicate an update, also replicates all versions.
+   - Permissions are also replicated.
+   - When You delete an object the delte action will replicate, but the undo delete won't replicate,
+     so you willl have to undodelete manually on the replica buccket.
+   - The delete version won't replicate.
