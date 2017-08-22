@@ -123,3 +123,11 @@ arrives at an edge location, data is routed to Amazon S3 over an optimized netwo
    - When You delete an object the delte action will replicate, but the undo delete won't replicate,
      so you willl have to undodelete manually on the replica buccket.
    - The delete version won't replicate.
+
+** Lifecycle Management & Glacier
+   - Versioning is optional with lifecycle management but can be used with it.
+   - Can be applied to current and previous versions.
+   - Actions you can do:
+     * Transition to the Standard-Infrequent Access Storage Class.
+     * Archive to the Glacier Storage Class.
+     * Permanently Delete objects(Will delete from S3 and Glacier).
