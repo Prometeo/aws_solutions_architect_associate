@@ -1,0 +1,33 @@
+* Cloudfront
+Amazon CloudFront can be used to deliver your entire website, including dynamic,
+static, streaming, and interactive content using  a global network of edge locations.
+Requests for your content are automatically routed to the nearest edge location, so
+content is delivered with best possible performance.
+
+Amazon Cloudfront is optimized to work with other Amazon Web Services, like Amazon Simple
+Storage Service(S3), Amazon Elastic Compute Cloud(EC2), Amazon Elastic Load Balancing,
+and Amazon Route 53. Amazon Cloudfront also works seamessly with  any non-AWS origin
+server, which stores the original, definitive versions of your files.
+
+** Content Delivery Network(CDN)
+   - Is a system of distribuited severs(network) that deliver webpages and other
+     web content to an user based on the geographic locations of the user,
+     the origin of the webpage and a content delivery server.
+
+** CloudFront - Key Terminology
+   - Edge Location: This is the location where content will be cached.
+   - Origin: This is the origin of the all files that the CDN will distribute.
+     They are not just READ only, you can write to them too.(ie put an object on to them)
+     This can beeither and S3 Bucket, an EC2 Instance, an Elastic Load Balancer
+     or Route 53.
+   - Distribution: This is the name given to the CDN which consits of a collection
+     of Edge locations.
+   - Web Distribution: Tpically used for websites.
+   - RTMP: Used for MEdia Streamming.
+
+** Notes
+   - Objects are cached for the life of the TTL(Time To Live).
+   - You can clear cached objects, but you will be charged.
+   - You can have multiple originsin the same distribution.
+   - You can restrict access to your Cloudfront distributions using signed URL or
+     signed Cookies.
