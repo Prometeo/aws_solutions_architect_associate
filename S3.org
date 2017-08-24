@@ -131,3 +131,29 @@ arrives at an edge location, data is routed to Amazon S3 over an optimized netwo
      * Transition to the Standard-Infrequent Access Storage Class.
      * Archive to the Glacier Storage Class.
      * Permanently Delete objects(Will delete from S3 and Glacier).
+
+** Securying your buckets
+   - By default, all newly created buckets are private.
+   - You can setup access control to your buckets using:
+     * Bucket Polices: Permissions are applied to the entire bukcet.
+     * Access Control Lists: You can control individual objects
+   - S3 buckets can be configured to create access logs which log all requests
+     made to the S3 bucket. This can be done to another bucket.
+
+** Encryption
+   - In transit: When you're sending information to and from your bucket by SSL/TLS
+   - At Rest: The are two ways to do this.
+     * Server Side Encryption: There are 3 methods under this way.
+       + S3 Managed Keys-SSE-S3: Each object is encypted with a unique key,
+         employing strong multifactor encryption, and then as additional safeguard
+         Amazon actually encrypt the key itself with master key(256) and they
+         regularly rotate that master key.
+       + AWS Key Management Service, Managed Keys-SSE-KMS: It's key management
+         service, separate permissions for the use of an envelope key, envelope
+         key is simply a key tha protects your data encryption key, also tells
+         you when your keys where used and who was actually using them.
+       + Server Side Encryption With Customer Provided Keys-SSE-C:
+         This is when you manage your keys and amazon manage the encryption as
+         it writes to disk and decryption when you access to the objects.
+     * Client Side Encryption: When you encrypt the data on your client and then
+       you upload it to S3.
