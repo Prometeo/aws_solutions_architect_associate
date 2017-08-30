@@ -241,3 +241,44 @@ arrives at an edge location, data is routed to Amazon S3 over an optimized netwo
      * Gateway Virtual Tape Library(VTL):
        - Used for backup and uses popular backup applications like NetBackup,
          Backup Exec, Veeam etc.
+
+
+** Snowball
+   - Is a petabyte-scale data transport solutionthat uses secure appliances to
+     transfer large amounts of data into and out of AWS. Using Snowball addresses
+     common challenges with large-scale data transfers including high network
+     costs, long transfer times, and security concerns. Transferring data with
+     Snowball is simple fast, secure, and can be as little as one-fifth the cost
+     of high-speed Internet.
+     80TB snowbal in all regions. Snowball uses multiple layers of security
+     designed to protect your data including tamper-resistant enclosures, 256-bit
+     encryption, and an industry-standard Trusted Platform Module(TPM) designed
+     to ensure both security and ful chain-of-custody of your data. Once the data
+     transfer job has been processed and verified, AWS performs a software erasure
+     of the Snowball appliance.
+
+** Snowball Edge
+   - is a 100TB data transfer device with on-board storage and compute capabilities.
+     You can use snowball Edge to move large amounts of data into and out of AWS,
+     as a temporary storage tier for large local datasets, or to support local
+     workloads in remote or offline locations.
+     Snowball Edge connects to your existing applications and infrastructure using
+     standard storage interfaces, streamlining the data transfer process and
+     minimizing setup and integration. Snowball Edge can cluster together to form
+     a local storage tier and process your data on-premises, helping ensure your
+     applications continue to run even when they are not able to access the cloud.
+
+** Snowmobile
+   - Is an Exabyte-scale data transfer service used to move extremely large amounts
+     of data to AWS. You can transfer up to 100PB per Snowmobile, a 45-foot long
+     ruggdized shipping container, pulled by a semi-trailer truck. Snowmobile
+     makes it easy to move massive volumes of data to the cloud, including video
+     libraries, image repositories, or even a complete data center migration.
+     Transferring data with Snowmobile is secure, fast and cost effective.
+
+** Snowball Tips
+   - Understand what snowball is.
+   - Understand what Import Export is.
+   - Snowball can:
+     * Import to S3.
+     * Export to S3.
