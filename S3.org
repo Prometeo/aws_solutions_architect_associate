@@ -282,3 +282,12 @@ arrives at an edge location, data is routed to Amazon S3 over an optimized netwo
    - Snowball can:
      * Import to S3.
      * Export to S3.
+
+** S3 Transfer Acceleration
+   - Utilises the CloudFront Edge Network to accelerate your uploads to s3.
+     Instead of uploading directly to your S3 bucket, you can use a distinct
+     URL to upload directly to an edge location which will then transfer that
+     file to S3. You will get a distinct URL to upload to.
+
+** S3 Static Website Hosting
+   - Format:  http://xairis3website.s3-website-us-east-1.amazonaws.com
