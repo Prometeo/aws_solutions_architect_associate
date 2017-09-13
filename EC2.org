@@ -1,0 +1,114 @@
+* EC2(Elastic Compute Cloud)
+  - Is a web service that provides resizable compute capacity in the cloud.
+    Amazon EC2 reduces the time required to obtain and boot new server instances
+    to minutes, allowing you to quickly scale capacity, both up and down, as
+    your computing requirements change.
+
+** EC2 Options
+   - [[On Demand]]: Allow you to pay fixed rate by the hour with no commitment.
+   - [[Reserved]]: Provide you with a capacity reservation, and offer a significant
+     discount on the hourly charge for an instance. 1 year or 3 years tem.
+   - [[Spot]]: Enable you to bid whatever price you want for instance capacity,
+     providing for even greater savings if your applications have flexible start
+     and end time.
+   - [[Dedicated Hosts]]: Physical EC2 server dedicated for your use. Dedicated Hosts
+     can help you reduce costs by allowing you to use your existing server-bound
+     software licenses.
+
+*** On Demand <<on demand>>
+    - Users thar want the low cost and flexibility of Amazon EC2 without any
+      up-front payment or long-term commitment.
+    - Applications with short term, spiky, or unpredictable workloads that cannot
+      be interrupted.
+    - Applications being developedor tested on Amazon EC2 for the first time.
+
+*** Reserved <<reserved>>
+   - Applications with steady state or predictable usage.
+   - Applications that require reserved capacity.
+   - Users able to make upfront payments to reduce their total computing costs
+     even further.
+
+*** Spot <<spot>>
+    - Applications that have flexible start and end times.
+    - Applications that are only feasible at very low compute prices.
+    - Users with urgent computing needs for large amounts of additional capacity.
+
+*** Dedicated Hosts <<dedicated hosts>>
+    - Useful for reqgulatory requirements that may not support multi-tenant
+      virtualization.
+    - Great for licensing which does not support multi-tenancy or cloud
+      deployments i.e SQL server License for only physical hardware.
+    - Can be purchased On-Demand (hourly).
+    - Can be purchased as a Reservation for up to 70% off the On-Demand price.
+
+
+** EC2 Instance Types
+
+   | Family | Speciality                   | Use Case                                 |
+   |--------+------------------------------+------------------------------------------|
+   | D2     | Dense Storage                | Fileservers/Data Warehousing/Haddop      |
+   | R4     | Memory Optimized             | Memory Intensive Apps/DBs                |
+   | M4     | General Purpose              | Application Servers                      |
+   | C4     | Compute Optimized            | CPU Intensive Apps/DBs                   |
+   | G2     | Graphics Intensive           | Video Encoding/3D Application Streamming |
+   | I2     | High Speed Storage           | NoSQL DBs, Data Warehousing etc          |
+   | F1     | Field Programable Gate Array | Hardware Acceleration for your code.     |
+   | T2     | Lowest Cost, General Purpose | Web Servers/Small DBs                    |
+   | P2     | Graphics/General Purpose GPU | Machine learning, Bit Coin Minning, etc  |
+   | X1     | Memory Optimized             | SAP HANA/Apache Spark etc                |
+
+
+** EBS
+   - Amazon EBS allows you to create storage volumes and attach them to Amazon EC2
+     instances. Once attached, you can create a file system on top of these volumes,
+     run a database, or use them in any other way you would use a block device.
+     Amazon EBS volumes are placed in a specific Availability Zone, where they are
+     automatically replicated to protect you from the failure of a single component.
+
+*** EBS Volume Types
+    - General Purpose SSD(Gp2):
+      * General purpose, balances both price and performance.
+      * Ratio of 3 IOPS per GB with up to 10,000 IOPS and the ability to burst up
+        to 3000 IOPS for extended periods of time for volumes under 1Gib.
+    - Provisioned IOPS SSD(IO1):
+      * Designed for I/O intensive applications such as large relational or NoSQL
+        databases.
+      * Use if you need more than 10000 IOPS.
+      * Can provision up to 20000 IOPS per volume.
+    - Throughput Optimized HDD(ST1) -> Magnetic Storage:
+      * Big data.
+      * Data warehouses.
+      * Log processing.
+      * Then can't be boot volumes, you can't boot from these particular drives.
+    - Cold HDD(SC1):
+      * Lowest Cost Storage for infrequently accessed workloads.
+      * File Server.
+      * Cannot be a boot volume.
+    - Magnetic(Standard):
+      * Lowest cost per gigabyte of all EBS volume typesthat is bootable. Magnetic
+        volumes are ideal for workloads where data is accessed infrequently, and
+        applications where the lowest storage cost is important.
+      * It's booteable.
+
+**** Exam Tips
+     - Spot Prices: If the spot instance is terminated by Amazon EC2, you will not
+       be charged for a partial hour of usage. However, if you terminate the
+       instance by yourself, you wil be charged for any hour in which the instance
+       ran.
+     - Know the difference between:
+       * On demand.
+       * Sport.
+       * Reserved.
+       * Dedicated Hosts.
+     - Remember with spot instances:
+       * If you terminate the insurance, you pay for the hour.
+       * If AWS terminates the spot instance, you get the hour it was terminated
+         for free.
+     - EBS Consists of:
+       * SSD, Gernal purpose-GP2-(Up to 10000 IOPS).
+       * SSD, Provisioned IOPS-IO1-(More than 10000 IOPS).
+       * HDD, Throughput Optimized-ST1 frequently access workloads.
+       * HDD, Cold-SC1- less frequently accessed data. Ideal for File Servers for example
+       * HDD magnetic - Standard- cheap, infrequently accessed storage(bootable).
+     - You cannot mount 1 EBS volume to multiple EC2 instances, instead use EFS.
+     - Remember all EC2 Instances types.
