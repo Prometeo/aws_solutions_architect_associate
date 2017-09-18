@@ -1,14 +1,14 @@
-* EC2(Elastic Compute Cloud)
-  - Is a web service that provides resizable compute capacity in the cloud.
-    Amazon EC2 reduces the time required to obtain and boot new server instances
+* ec2(elastic compute cloud)
+  - is a web service that provides resizable compute capacity in the cloud.
+    amazon ec2 reduces the time required to obtain and boot new server instances
     to minutes, allowing you to quickly scale capacity, both up and down, as
     your computing requirements change.
 
-** EC2 Options
-   - [[On Demand]]: Allow you to pay fixed rate by the hour with no commitment.
-   - [[Reserved]]: Provide you with a capacity reservation, and offer a significant
+** ec2 options
+   - [[on demand]]: allow you to pay fixed rate by the hour with no commitment.
+   - [[reserved]]: provide you with a capacity reservation, and offer a significant
      discount on the hourly charge for an instance. 1 year or 3 years tem.
-   - [[Spot]]: Enable you to bid whatever price you want for instance capacity,
+   - [[spot]]: enable you to bid whatever price you want for instance capacity,
      providing for even greater savings if your applications have flexible start
      and end time.
    - [[Dedicated Hosts]]: Physical EC2 server dedicated for your use. Dedicated Hosts
@@ -65,6 +65,19 @@
      Amazon EBS volumes are placed in a specific Availability Zone, where they are
      automatically replicated to protect you from the failure of a single component.
 
+** Security Groups
+   - Any rule you make to a security group applies inmediately.
+   - All Inbound traffic is blocked by default.
+   - You can have any number of EC2 instances within a security group.
+   - You can have multiple security groups attached to EC2 Instances.
+   - Security Groups are STATEFUL.
+     * If you create an inbound rulle allowing traffic inm that traffic is
+       automatically allowed back out again.
+   - You cannot block specific IP addresses using Security Groups, instead use
+     Network Access Control Lists.
+   - You can specify allow rules, but not deny rules.
+
+
 *** EBS Volume Types
     - General Purpose SSD(Gp2):
       * General purpose, balances both price and performance.
@@ -112,3 +125,10 @@
        * HDD magnetic - Standard- cheap, infrequently accessed storage(bootable).
      - You cannot mount 1 EBS volume to multiple EC2 instances, instead use EFS.
      - Remember all EC2 Instances types.
+     - Termination protection is turned off by default.
+     - On an EBS-backed instance, the default acion is for the root EBS volume to
+       be deleted when the instance is terminated.
+     - EBS Root Volumes of your DEFAULT AMI's cannot be encrypted. You can also
+       use a third party tool(such as bit locker etc) to encrypt the root volume,
+       or this can be done when creating AMI's in the AWS console or using the API.
+     - Additional volumes fo your DEFAULT AMI's can be encrypted(not root volumes).
