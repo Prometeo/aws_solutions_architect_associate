@@ -132,3 +132,11 @@
        use a third party tool(such as bit locker etc) to encrypt the root volume,
        or this can be done when creating AMI's in the AWS console or using the API.
      - Additional volumes fo your DEFAULT AMI's can be encrypted(not root volumes).
+     - EBS Volumes can be changed on the fly (except for magnetic standard).
+     - Best practice to stop the EC2 instance and then change the volume.
+     - You can change volume types by taking a snapshot and then using the
+       snapshot to create a new volume.
+     - If you change a volume on the fly you must wait for 6 hours before making
+       another change.
+     - You can scale EBS volumes up only.
+     - Volumes must be on the same Avilability Zone as the EC2 instances.
