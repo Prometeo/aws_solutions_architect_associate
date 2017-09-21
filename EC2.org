@@ -103,7 +103,24 @@
         applications where the lowest storage cost is important.
       * It's booteable.
 
-**** Exam Tips
+** RAID(Redundant Array of Independent Disks):
+   - RAID0: Striped, No redundance, Good PErformance.
+   - RAID1: Mirrored, Redundancy.
+   - RAID5: Good for reads, bad for writes, AWS does not recommend ever putting
+            RAID 5's on EBS.
+   - RAID10: Stripped & Mirrored, Good Redundancy, Good Performance.
+
+** How to take a snapshot of a RAID array?
+   - Stop the application from writting to disk.
+   - Flush all caches to the disk.
+
+*** How to do that?
+    - Freeze the file System.
+    - Unmount the RAID Array.
+    - Shutting down the associated EC2 instance.
+
+
+** Exam Tips
      - Spot Prices: If the spot instance is terminated by Amazon EC2, you will not
        be charged for a partial hour of usage. However, if you terminate the
        instance by yourself, you wil be charged for any hour in which the instance
