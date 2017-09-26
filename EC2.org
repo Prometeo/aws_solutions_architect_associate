@@ -119,6 +119,14 @@
     - Unmount the RAID Array.
     - Shutting down the associated EC2 instance.
 
+** Snapshots of Root Device Volumes and Secuity(Encripted)
+   - To create a snapshot for Amazon EBS volumes that serve as root devices, you
+     should stop the instance before taking the snapshot.
+   - Snapshots of encrypted volumes are encrypted automatically.
+   - Volumes restored from encrypted snapshots are encrypted automatically.
+   - You can share snapshots, but only if they are unencrypted.
+     * These snapshots can be shared with other AWS accounts or made public.
+
 
 ** Exam Tips
      - Spot Prices: If the spot instance is terminated by Amazon EC2, you will not
