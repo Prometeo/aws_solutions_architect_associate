@@ -127,6 +127,18 @@
    - You can share snapshots, but only if they are unencrypted.
      * These snapshots can be shared with other AWS accounts or made public.
 
+** You can select your AMI devices based on:
+   - Region(see Regions and Availability Zones).
+   - Operating System.
+   - Architecture(32-bit or 64-bit).
+   - Launch Permissions.
+   - Storage for the Root Device(Root DEvice Volume).
+     * Instance Store(EPHEMERAL STORAGE).
+     * EBS Backed Volumes.
+
+*** Differences between Instance Storace and EBS
+   - With an Instance Storage you can not stop the instance.
+   - With EBS you can stop the instace.
 
 ** Exam Tips
      - Spot Prices: If the spot instance is terminated by Amazon EC2, you will not
