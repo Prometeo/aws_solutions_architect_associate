@@ -140,6 +140,12 @@
    - With an Instance Storage you can not stop the instance.
    - With EBS you can stop the instace.
 
+** Elastic Load Balancers
+   - Instances monitored by ELB are reported as InService, or OutofService.
+   - Health Checks check the instance health by talking to it.
+   - Have their own DNS name. You are never given an IP address.
+   - Read the ELB FAQ for Classic Load Balancers.
+
 ** Exam Tips
      - Spot Prices: If the spot instance is terminated by Amazon EC2, you will not
        be charged for a partial hour of usage. However, if you terminate the
