@@ -146,40 +146,51 @@
    - Have their own DNS name. You are never given an IP address.
    - Read the ELB FAQ for Classic Load Balancers.
 
+** CloudWatch
+   - Dashboards: Create awesome dashboards to see what is happening with your
+     AWS environment.
+   - Alarms: Allows you to set Alarms that notify you when particular thresholds
+     are hit.
+   - Events: CloudWatch events helps you to respond to state changes in your AWS
+     resources.
+   - Logs: CloudWatch Logs helps you to aggregate, monitor, and store logs.
+   - Standard Monitoring = 5 Minutes.
+   - Detailed Monitoring = 1 minute.
+
 ** Exam Tips
-     - Spot Prices: If the spot instance is terminated by Amazon EC2, you will not
-       be charged for a partial hour of usage. However, if you terminate the
-       instance by yourself, you wil be charged for any hour in which the instance
-       ran.
-     - Know the difference between:
-       * On demand.
-       * Sport.
-       * Reserved.
-       * Dedicated Hosts.
-     - Remember with spot instances:
-       * If you terminate the insurance, you pay for the hour.
-       * If AWS terminates the spot instance, you get the hour it was terminated
-         for free.
-     - EBS Consists of:
-       * SSD, Gernal purpose-GP2-(Up to 10000 IOPS).
-       * SSD, Provisioned IOPS-IO1-(More than 10000 IOPS).
-       * HDD, Throughput Optimized-ST1 frequently access workloads.
-       * HDD, Cold-SC1- less frequently accessed data. Ideal for File Servers for example
-       * HDD magnetic - Standard- cheap, infrequently accessed storage(bootable).
-     - You cannot mount 1 EBS volume to multiple EC2 instances, instead use EFS.
-     - Remember all EC2 Instances types.
-     - Termination protection is turned off by default.
-     - On an EBS-backed instance, the default acion is for the root EBS volume to
-       be deleted when the instance is terminated.
-     - EBS Root Volumes of your DEFAULT AMI's cannot be encrypted. You can also
-       use a third party tool(such as bit locker etc) to encrypt the root volume,
-       or this can be done when creating AMI's in the AWS console or using the API.
-     - Additional volumes fo your DEFAULT AMI's can be encrypted(not root volumes).
-     - EBS Volumes can be changed on the fly (except for magnetic standard).
-     - Best practice to stop the EC2 instance and then change the volume.
-     - You can change volume types by taking a snapshot and then using the
-       snapshot to create a new volume.
-     - If you change a volume on the fly you must wait for 6 hours before making
-       another change.
-     - You can scale EBS volumes up only.
-     - Volumes must be on the same Avilability Zone as the EC2 instances.
+   - Spot Prices: If the spot instance is terminated by Amazon EC2, you will not
+     be charged for a partial hour of usage. However, if you terminate the
+     instance by yourself, you wil be charged for any hour in which the instance
+     ran.
+   - Know the difference between:
+     * On demand.
+     * Sport.
+     * Reserved.
+     * Dedicated Hosts.
+   - Remember with spot instances:
+     * If you terminate the insurance, you pay for the hour.
+     * If AWS terminates the spot instance, you get the hour it was terminated
+       for free.
+   - EBS Consists of:
+     * SSD, Gernal purpose-GP2-(Up to 10000 IOPS).
+     * SSD, Provisioned IOPS-IO1-(More than 10000 IOPS).
+     * HDD, Throughput Optimized-ST1 frequently access workloads.
+     * HDD, Cold-SC1- less frequently accessed data. Ideal for File Servers for example
+     * HDD magnetic - Standard- cheap, infrequently accessed storage(bootable).
+   - You cannot mount 1 EBS volume to multiple EC2 instances, instead use EFS.
+   - Remember all EC2 Instances types.
+   - Termination protection is turned off by default.
+   - On an EBS-backed instance, the default acion is for the root EBS volume to
+     be deleted when the instance is terminated.
+   - EBS Root Volumes of your DEFAULT AMI's cannot be encrypted. You can also
+     use a third party tool(such as bit locker etc) to encrypt the root volume,
+     or this can be done when creating AMI's in the AWS console or using the API.
+   - Additional volumes fo your DEFAULT AMI's can be encrypted(not root volumes).
+   - EBS Volumes can be changed on the fly (except for magnetic standard).
+   - Best practice to stop the EC2 instance and then change the volume.
+   - You can change volume types by taking a snapshot and then using the
+     snapshot to create a new volume.
+   - If you change a volume on the fly you must wait for 6 hours before making
+     another change.
+   - You can scale EBS volumes up only.
+   - Volumes must be on the same Avilability Zone as the EC2 instances.
